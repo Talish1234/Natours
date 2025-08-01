@@ -1,0 +1,6 @@
+extends base
+include _myReviewCard
+block content 
+    .reviews
+     each review in reviews 
+      +reviewCard(review)
