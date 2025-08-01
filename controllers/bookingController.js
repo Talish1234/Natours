@@ -11,6 +11,8 @@ exports.getCheckoutSession = catchAsync( async (req,res,next) => {
         payment_method_types: ['card'],
         customer_email:req.user.email,
         client_reference_id:req.params.tourId,
+          billing_address_collection: 'required',
+          customer_creation: 'always',
         line_items: [{
           price_data: {
           currency: 'inr',
